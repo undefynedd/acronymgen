@@ -1,0 +1,9 @@
+file = open("friendlywords.txt", "a")
+
+def write():
+    userinput = input("word?\n")
+    if userinput == "":
+        return
+    file.writelines(userinput+"\n")
+    write()
+write()
