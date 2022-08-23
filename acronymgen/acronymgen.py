@@ -9,13 +9,16 @@ f.close()
 userinput = input("whats acronym\n")
 
 def generate(acronym):
-    for i in acronym:
-        begin = []
+    list = []
+    for char in acronym:
+        possible = []
+        
         for word in words:
-            if word.lower().startswith(i.lower()): #if first letter matches
-                begin.append(word.lower())
-        index = random.randint(0,len(begin)-1)
-        print(begin[index].capitalize(), end=" ")
-    print("\n")
+            if word.lower().startswith(char.lower()): #if first letter matches
+                possible.append(word.capitalize())
 
-generate(userinput)
+        w = random.choice(possible)
+        list.append(w)   
+    return list
+
+print(" ".join(generate(userinput)))
