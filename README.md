@@ -1,2 +1,2 @@
 # acronymgen
-generates words from acronym
+generates words from an acronym (some letter make words)
